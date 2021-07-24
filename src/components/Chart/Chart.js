@@ -10,10 +10,9 @@ const Chart = ({dataPoints}) => {
         <>
             <div className="chart">
                 { dataPoints?.map( (dataPoint) => {
-                    //console.log(dataPoints, 'data individualy')
                     return (
                         <ChartBar
-                            key={ dataPoint.id }
+                            key={ Math.random() }
                             value={dataPoint.value}
                             maxValue={totalMaximum}
                             label={dataPoint.label}
